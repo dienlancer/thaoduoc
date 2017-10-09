@@ -63,17 +63,28 @@ $arrUser = @$ssUser->get($ssValue)["userInfo"];
                     </div>
     </div>
     <div class="col-lg-3"><img src="<?php echo wp_upload_dir( )["url"]."/doctor.png"; ?>" class="doctor"></div>
-    <div class="col-lg-3">        
-        <table>
-            <tr>
-                <td><a href="index.php" class="a1">Hướng dẫn mua hàng</a></td>
-                <td><img src="<?php echo wp_upload_dir()["url"]."/Cart-icon.png"; ?>"  /></td>                
-            </tr>
-            <tr>
-                <td><a href="index.php" class="a1">Chính sách vận chuyển</a></td>
-                <td><img src="<?php echo wp_upload_dir()["url"]."/Cow-wagon-icon.png"; ?>"  /></td>                
-            </tr>
-        </table>        
+    <div class="col-lg-3">           
+        <?php     
+            $args = array( 
+                                'menu'              => '', 
+                                'container'         => '', 
+                                'container_class'   => '', 
+                                'container_id'      => '', 
+                                'menu_class'        => 'hdmhcsvc', 
+                                'menu_id'           => 'hdmh-csvc', 
+                                'echo'              => true, 
+                                'fallback_cb'       => 'wp_page_menu', 
+                                'before'            => '', 
+                                'after'             => '', 
+                                'link_before'       => '', 
+                                'link_after'        => '', 
+                                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                                'depth'             => 3, 
+                                'walker'            => '', 
+                                'theme_location'    => 'hdmh-csvc' 
+                            );
+            wp_nav_menu($args);
+        ?>      
     </div>
 </div>
 <?php require_once "main-menu.php"; ?>

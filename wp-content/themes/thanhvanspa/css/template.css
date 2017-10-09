@@ -129,7 +129,7 @@ text-align: center;
 }
 .menumain {
     background: #318A00;
-    margin-top: 30px;
+    margin-top: 43px;
 }
 .menucategoryproduct h3 {
     margin: 0;
@@ -384,4 +384,24 @@ div.logo-footer > div > div:first-child{
 }
 div.logo-footer > div > div:first-child > div:first-child{
     padding-left: 0;
+}
+ul#hdmh-csvc > li:first-child{
+      background: rgba(0, 0, 0, 0) url("../images/Cow-wagon-icon.png") no-repeat scroll right center;
+}
+ul#hdmh-csvc > li:last-child{
+      background: rgba(0, 0, 0, 0) url("../images/Cow-wagon-icon.png") no-repeat scroll right center;
+}
+ul#hdmh-csvc > li{
+    padding-top: 5px;
+}
+ul#hdmh-csvc{
+    list-style: none;
+}
+ul#hdmh-csvc > li > a{
+    font-size: 15px;
+    color: #318A00
+}
+ul#hdmh-csvc{
+       width: 184px;
+    margin: auto;
 }

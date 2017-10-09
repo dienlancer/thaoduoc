@@ -14,10 +14,11 @@ add_action('init', 'zendvn_theme_register_menus');
 function zendvn_theme_register_menus(){
 	register_nav_menus(
 		array(			
-			'footer-menu' 	=> __('Footer menu'),
-			'main-menu' 	=> __('Main menu'),
-			'top-menu' 		=> __('Top menu'),
+			'footer-menu' 			=> __('Footer menu'),
+			'main-menu' 			=> __('Main menu'),
+			'top-menu' 				=> __('Top menu'),
 			'category-product-menu' => __('Category product menu'),
+			'hdmh-csvc' => __('Hướng dẫn mua hàng - Csvc'),
 		)
 	);
 }
