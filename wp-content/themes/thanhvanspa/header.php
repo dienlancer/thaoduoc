@@ -22,7 +22,7 @@ global $customizerGlobal;
 <body>
     <?php
 /*require_once get_template_directory()."/check-page.php";
-new CheckPage();*/ 
+new CheckPage();*/
 global $zController;
 $page_id_register_member = $zController->getHelper('GetPageId')->get('_wp_page_template','register-member.php');  
 $page_id_account = $zController->getHelper('GetPageId')->get('_wp_page_template','account.php');
@@ -42,7 +42,7 @@ $arrUser = @$ssUser->get($ssValue)["userInfo"];
     <?php require_once "top-menu.php"; ?>
     <div class="container header-midd">
         <div class="logo col-lg-2">
-            <a class="cg-main-logo" href="<?php echo $customizerGlobal->general_section('link-site');?>">
+            <a class="cg-main-logo" href="index.php">
                 <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
             </a>
         </div>

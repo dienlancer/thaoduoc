@@ -7,10 +7,10 @@
 	 ?>
 	 <?php get_header();?>
 	 <div class="container">
-	 	<?php require_once "tim-nhieu-nhat.php"; ?>
-	 	<?php require_once "category-product-menu.php"; ?>
-	 	<?php require_once "product-frontend.php"; ?>
-	 	<?php require_once "menu-bottom.php"; ?>	 	
+	 	<?php require_once get_template_directory().DS."tim-nhieu-nhat.php"; ?>
+	 	<?php require_once get_template_directory().DS."category-product-menu.php"; ?>
+	 	<?php require_once get_template_directory().DS."product-frontend.php"; ?>
+	 	<?php require_once get_template_directory().DS."menu-bottom.php"; ?>	 	
 	 	<?php get_footer(); ?>
 	 	<?php wp_footer();?>
 	 </body>
