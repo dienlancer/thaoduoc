@@ -18,7 +18,14 @@ function zendvn_theme_register_menus(){
 			'main-menu' 			=> __('Main menu'),
 			'top-menu' 				=> __('Top menu'),
 			'category-product-menu' => __('Category product menu'),
-			'hdmh-csvc' => __('Hướng dẫn mua hàng - Csvc'),
+			'hdmh-csvc' 			=> __('Hướng dẫn mua hàng - Csvc'),
+			'tim-nhieu-nhat' 		=> __('Tìm nhiều nhất'),
+			'chinh-sach-ban-hang' 	=> __('Chính sách bán hàng'),
+			'menu-bottom' 			=> __('MenuBottom'),
+			'huong-dan-module-1' 	=> __('Hướng dẫn module 1'),
+			'huong-dan-module-2' 	=> __('Hướng dẫn module 2'),
+			'huong-dan-module-3' 	=> __('Hướng dẫn module 3'),
+			'huong-dan-module-4' 	=> __('Hướng dẫn module 4'),
 		)
 	);
 }

@@ -8,8 +8,8 @@ global $customizerGlobal;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         <?php 
-            wp_title('|', true,'right');
-            bloginfo('name');
+        wp_title('|', true,'right');
+        bloginfo('name');
         ?>
     </title>    
     <!--[if lt IE 9]>
@@ -20,9 +20,9 @@ global $customizerGlobal;
     <?php wp_head();?>
 </head>
 <body>
-<?php
+    <?php
 /*require_once get_template_directory()."/check-page.php";
-    new CheckPage();*/ 
+new CheckPage();*/ 
 global $zController;
 $page_id_register_member = $zController->getHelper('GetPageId')->get('_wp_page_template','register-member.php');  
 $page_id_account = $zController->getHelper('GetPageId')->get('_wp_page_template','account.php');
@@ -40,52 +40,76 @@ $arrUser = @$ssUser->get($ssValue)["userInfo"];
 ?>
 <div class="bg-header">
     <?php require_once "top-menu.php"; ?>
-<div class="container header-midd">
-    <div class="logo col-lg-2">
-        <a class="cg-main-logo" href="<?php echo $customizerGlobal->general_section('link-site');?>">
-                        <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
-                    </a>
-    </div>
-    <div class="col-lg-4">
-        <div class="sologan-l">
-            <p>
-                <i class="fa fa-phone" aria-hidden="true"></i> 
-                <span>Hotline</span>
-            </p>
-            <div class="clr"></div>
-            <p class="faq-order">Tư vấn, đặt hàng 24/24</p>
+    <div class="container header-midd">
+        <div class="logo col-lg-2">
+            <a class="cg-main-logo" href="<?php echo $customizerGlobal->general_section('link-site');?>">
+                <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
+            </a>
         </div>
-        <div class="sologan-r">
-                        <div class="sologan-r-in">
-                            091 32 586 32
-                        </div>
+        <div class="col-lg-4">
+            <div class="sologan-l">
+                <p>
+                    <i class="fa fa-phone" aria-hidden="true"></i> 
+                    <span>Hotline</span>
+                </p>
+                <div class="clr"></div>
+                <p class="faq-order">Tư vấn, đặt hàng 24/24</p>
+            </div>
+            <div class="sologan-r">
+                <div class="sologan-r-in">
+                    091 32 586 32
+                </div>
 
-                    </div>
-    </div>
-    <div class="col-lg-3"><img src="<?php echo wp_upload_dir( )["url"]."/doctor.png"; ?>" class="doctor"></div>
-    <div class="col-lg-3">           
-        <?php     
+            </div>
+        </div>
+        <div class="col-lg-3"><img src="<?php echo wp_upload_dir( )["url"]."/doctor.png"; ?>" class="doctor"></div>
+        <div class="col-lg-3">           
+            <?php     
             $args = array( 
-                                'menu'              => '', 
-                                'container'         => '', 
-                                'container_class'   => '', 
-                                'container_id'      => '', 
-                                'menu_class'        => 'hdmhcsvc', 
-                                'menu_id'           => 'hdmh-csvc', 
-                                'echo'              => true, 
-                                'fallback_cb'       => 'wp_page_menu', 
-                                'before'            => '', 
-                                'after'             => '', 
-                                'link_before'       => '', 
-                                'link_after'        => '', 
-                                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                                'depth'             => 3, 
-                                'walker'            => '', 
-                                'theme_location'    => 'hdmh-csvc' 
-                            );
+                'menu'              => '', 
+                'container'         => '', 
+                'container_class'   => '', 
+                'container_id'      => '', 
+                'menu_class'        => 'hdmhcsvc', 
+                'menu_id'           => 'hdmh-csvc', 
+                'echo'              => true, 
+                'fallback_cb'       => 'wp_page_menu', 
+                'before'            => '', 
+                'after'             => '', 
+                'link_before'       => '', 
+                'link_after'        => '', 
+                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                'depth'             => 3, 
+                'walker'            => '', 
+                'theme_location'    => 'hdmh-csvc' 
+            );
             wp_nav_menu($args);
-        ?>      
+            ?>      
+        </div>
     </div>
-</div>
-<?php require_once "main-menu.php"; ?>
+    <div class="menumain">    
+        <div class="container">
+           <?php     
+           $args = array( 
+            'menu'              => '', 
+            'container'         => '', 
+            'container_class'   => '', 
+            'container_id'      => '', 
+            'menu_class'        => 'mainmenu', 
+            'menu_id'           => 'ja-cssmenu', 
+            'echo'              => true, 
+            'fallback_cb'       => 'wp_page_menu', 
+            'before'            => '', 
+            'after'             => '', 
+            'link_before'       => '', 
+            'link_after'        => '', 
+            'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+            'depth'             => 3, 
+            'walker'            => '', 
+            'theme_location'    => 'main-menu' 
+        );
+           wp_nav_menu($args);
+           ?>
+       </div>
+   </div>
 </div>

@@ -191,16 +191,17 @@ text-align: center;
 .search-area{
     margin-top: 5px;
 }
-.list-search li {
+.timnhieunhat li {
     float: left;
 }
-ul.list-search{
-    list-style: none;
+ul.timnhieunhat{
+        list-style: none;
+    margin: 5px 0px 0px 0px;
 }
-ul.list-search > li > a{
+ul.timnhieunhat > li > a{
     font-size: 15px;
 }
-ul.list-search > li:first-child{
+ul.timnhieunhat > li:first-child{
     font-size: 15px;
 }
 div.banner-child{

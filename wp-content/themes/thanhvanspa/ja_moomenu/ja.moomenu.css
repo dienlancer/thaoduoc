@@ -12,7 +12,7 @@
 #ja-cssmenu li.sfhover ul, #ja-cssmenu li.havechildsfhover ul, #ja-cssmenu li.havechild-activesfhover ul, #ja-cssmenu li.activesfhover ul,
 #ja-cssmenu li li.sfhover ul, #ja-cssmenu li li.havesubchildsfhover ul, #ja-cssmenu li li.havesubchild-activesfhover ul, #ja-cssmenu li li.activesfhover ul,
 #ja-cssmenu li li li.sfhover ul, #ja-cssmenu li li li.havesubchildsfhover ul, #ja-cssmenu li li li.havesubchild-activesfhover ul, #ja-cssmenu li li li.activesfhover ul{left:auto;}
-#ja-cssmenu li a{display:block;text-decoration:none;font-size:12px;color:#ffffff;padding:10px 20px;font-weight:normal;text-transform:uppercase;font-family: "times-new-roman"}
+#ja-cssmenu li a{display:block;text-decoration:none;font-size:12px;color:#ffffff;padding:10px 18px;font-weight:normal;text-transform:uppercase;font-family: "times-new-roman"}
 #ja-cssmenu li a:hover,
 #ja-cssmenu li a:active,
 #ja-cssmenu li a:focus{color:#ffffff;background:#62b600}
