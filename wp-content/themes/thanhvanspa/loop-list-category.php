@@ -19,15 +19,14 @@ if(have_posts()){
   			$categoryName=$value->name;
   			$prefix_id="mp-taxonomy-category-";
   			$option_name = $prefix_id . $value->term_id;  					
-			$option_value = get_option($option_name,array());
-			$imageCategory=$option_value["picture"];
+  			$option_value = get_option($option_name,array());
+  			$imageCategory=$option_value["picture"];
   			?>
   			<div class="col-sm-4">
 					<div>
 					<figure><a href="<?php echo $categoryLink; ?>"><img src="<?php echo $imageCategory ?>"></a></figure>
 					</div>
 					<div class="item-row-title-category-article"><a href="<?php echo $categoryLink; ?>" class="a_1"><?php echo $categoryName; ?></a></div>
-
 			</div>
   			<?php
   			if($i%3==0)

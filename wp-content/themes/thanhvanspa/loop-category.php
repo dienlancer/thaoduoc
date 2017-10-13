@@ -1,7 +1,7 @@
 <form  method="post"  class="frm">
     <h1 class="title-category"><?php single_cat_title(); ?></h1><hr>
     <?php
-    global $zController,$zendvn_sp_settings,$post;    
+    global $zController,$zendvn_sp_settings;    
     $vHtml=new HtmlControl();
     $zController->getController("/frontend","ProductController");
     $productModel=$zController->getModel("/frontend","ProductModel"); 
@@ -18,11 +18,11 @@
     $productModel->prepare_items();               
     $totalItems= $productModel->getTotalItems();               
     $arrPagination=array(
-                              "totalItems"=>$totalItems,
-                              "totalItemsPerPage"=>$totalItemsPerPage,
-                              "pageRange"=>$pageRange,
-                              "currentPage"=>$currentPage   
-                              );    
+      "totalItems"=>$totalItems,
+      "totalItemsPerPage"=>$totalItemsPerPage,
+      "pageRange"=>$pageRange,
+      "currentPage"=>$currentPage   
+  );    
     $pagination=$zController->getPagination("Pagination",$arrPagination);     
     if(have_posts()){        
         $i=1; 
@@ -35,32 +35,32 @@
             ?>
             <div class="article-lst">
 
-				<div class="col-sm-4">
+                <div class="col-sm-4">
 
-					<figure><a href="<?php echo $productLink; ?>"><img src="<?php echo $featureImg; ?>" /></a></figure>
+                   <figure><a href="<?php echo $productLink; ?>"><img src="<?php echo $featureImg; ?>" /></a></figure>
 
-				</div>
+               </div>
 
-				<div class="col-sm-8 category-right">
+               <div class="col-sm-8 category-right">
 
-					<div class="margin-bottom-5"><h2 class="tep"><a href="<?php echo $productLink; ?>" ><?php echo $productName; ?></a></h2></div>
+                   <div class="margin-bottom-5"><h2 class="tep"><a href="<?php echo $productLink; ?>" ><?php echo $productName; ?></a></h2></div>
 
-					<div class="category-intro"><?php echo $productExcerpt; ?></div>					
+                   <div class="category-intro"><?php echo $productExcerpt; ?></div>					
 
-				</div>
+               </div>
 
-				<div class="clr"></div>
+               <div class="clr"></div>
 
-			</div>
-            <?php                        
-        }
-        echo '<div class="clr"></div>';
-        echo $pagination->showPagination();                
-    }
-    ?>
-    <input type="hidden" name="filter_page" value="1" /> 
+           </div>
+           <?php                        
+       }
+       echo '<div class="clr"></div>';
+       echo $pagination->showPagination();                
+   }
+   ?>
+   <input type="hidden" name="filter_page" value="1" /> 
 </form>    
 
 
 
-		
+
