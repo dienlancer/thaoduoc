@@ -42,9 +42,7 @@ $arrUser = @$ssUser->get($ssValue)["userInfo"];
     <?php require_once "top-menu.php"; ?>
     <div class="container header-midd">
         <div class="logo col-lg-2">
-            <a class="cg-main-logo" href="index.php">
-                <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
-            </a>
+            
         </div>
         <div class="col-lg-4">
             <div class="sologan-l">
